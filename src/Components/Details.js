@@ -70,7 +70,9 @@ constructor(){
 
 
 getmenu=()=>{
-    axios.get('http://localhost:5403/menu').then(
+    axios.get('https://zombackend.onrender.com/menu').then(
+    // axios.get('http://localhost:5403/menu').then(
+
         result=>{
             this.setState({
                 menu:result.data.menu
@@ -88,7 +90,7 @@ componentDidMount(){
     // console.log(hotelid);
 
 
-    axios.get( `http://localhost:5403/restaurantsbyidm/${hotelid}`).then(result=>
+    axios.get( `https://zombackend.onrender.com/restaurantsbyidm/${hotelid}`).then(result=>
    
      this.setState({
         restaurants:result.data.location
@@ -120,7 +122,7 @@ saveorderdetail=(addrs,hotel)=>{
   }
   axios({
     method:'POST',
-    url:'http://localhost:5403/saveorder',
+    url:'https://zombackend.onrender.com/saveorder',
     headers:{'Content-Type':'application/json'},
     data:order
   }).then(result=>{

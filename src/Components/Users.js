@@ -97,7 +97,7 @@ class Users extends Component{
       }
       axios({
          method:'POST',
-         url:'http://localhost:5403/login',
+         url:'https://zombackend.onrender.com/login',
          header:{ 'Content-Type':'application/json'},
          data:obj
       })
@@ -146,7 +146,7 @@ class Users extends Component{
 
       axios({
          method:("POST"),
-         url:('http://localhost:5403/signup'),
+         url:('https://zombackend.onrender.com/signup'),
          header:{'Content-Type':'application/json'},
          data:obj
       }).then(result=>{
@@ -165,7 +165,7 @@ class Users extends Component{
    }
 
    getorder=()=>{
-      axios.get('http://localhost:5403/orders').then(result=>{ this.setState({orderdata:result.data.orders})}).catch(error=>{console.log(error)})
+      axios.get('https://zombackend.onrender.com/orders').then(result=>{ this.setState({orderdata:result.data.orders})}).catch(error=>{console.log(error)})
 
    }
 

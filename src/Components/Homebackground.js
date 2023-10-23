@@ -28,7 +28,7 @@ class Homebackgroundfunc extends Component{
         } 
     
          componentDidMount(){
-             axios.get('http://localhost:5403/location')
+             axios.get('https://zombackend.onrender.com/location')
             .then(result =>{
                 this.setState(
                     {
@@ -48,7 +48,7 @@ class Homebackgroundfunc extends Component{
                 city_id:city_id
             })
             localStorage.setItem("city_id", city_id);
-            axios.get(`http://localhost:5403/restaurantsbycitym/${city_id}`)
+            axios.get(`https://zombackend.onrender.com/restaurantsbycitym/${city_id}`)
             .then(result=>{ 
                 const options =result.data.location;
                 this.setState({

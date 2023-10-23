@@ -173,7 +173,9 @@ navigate=(item)=>{
     }
     axios( {
             method:"POST",
-            url:'http://localhost:5403/filterrestaurants',
+            url:'https://zombackend.onrender.com/filterrestaurants',
+            // url:'http://localhost:5403/filterrestaurants',
+
             headers:{'Content-Type':'application/json'},
             data:req
 

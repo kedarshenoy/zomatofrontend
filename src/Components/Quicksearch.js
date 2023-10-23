@@ -18,7 +18,7 @@ class Quicksearch extends Component{
 
 componentDidMount(){
     
-axios.get("http://localhost:5403/mealtype").then(
+axios.get("https://zombackend.onrender.com/mealtype").then(
     result=>{
         this.setState({
             mealtype:result.data.location

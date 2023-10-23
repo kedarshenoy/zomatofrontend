@@ -82,7 +82,7 @@ class Nav extends Component{
         }
         axios({
            method:'POST',
-           url:'http://localhost:5403/login',
+           url:'https://zombackend.onrender.com/login',
            header:{ 'Content-Type':'application/json'},
            data:obj
         })
@@ -134,7 +134,7 @@ class Nav extends Component{
   
         axios({
            method:("POST"),
-           url:('http://localhost:5403/signup'),
+           url:('https://zombackend.onrender.com/signup'),
            header:{'Content-Type':'application/json'},
            data:obj
         }).then(result=>{
